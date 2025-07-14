@@ -53,7 +53,7 @@ export const useGizmoStore = create<GizmoStore>((set, get) => ({
   },
 
   deleteSelected: () => {
-    const { selectedIds, gizmos } = get();
+    const { selectedIds } = get();
     const count = selectedIds.size;
     
     set((state) => ({
