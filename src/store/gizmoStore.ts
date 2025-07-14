@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { GizmoStore, Gizmo } from '@/types/gizmo';
+import type { GizmoStore, Gizmo } from '@/types/gizmo';
 import { generateSeedData } from '@/data/seedData';
 import { notifications } from '@mantine/notifications';
 
