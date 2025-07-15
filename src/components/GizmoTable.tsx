@@ -12,8 +12,8 @@ import {
   Badge,
   Pagination,
   Select,
-  ScrollArea,
   UnstyledButton,
+  ScrollArea,
 } from '@mantine/core';
 import {
   Search,
@@ -22,6 +22,7 @@ import {
   RefreshCw,
   ChevronUp,
   ChevronDown,
+  ChevronsUpDown,
 } from 'lucide-react';
 import { useGizmoStore } from '@/store/gizmoStore';
 import type { Gizmo } from '@/types/gizmo';
@@ -117,8 +118,10 @@ export function GizmoTable({ onNewGizmo }: GizmoTableProps) {
     <UnstyledButton onClick={() => handleSort(field)} style={{ width: '100%' }}>
       <Group justify="space-between" wrap="nowrap">
         <Text fw={500}>{children}</Text>
-        {sortField === field && (
+        {sortField === field ? (
           sortDirection === 'asc' ? <ChevronUp size={14} /> : <ChevronDown size={14} />
+        ) : (
+          <ChevronsUpDown size={14} opacity={0.5} />
         )}
       </Group>
     </UnstyledButton>
@@ -171,24 +174,24 @@ export function GizmoTable({ onNewGizmo }: GizmoTableProps) {
 
       <Paper shadow="sm" withBorder>
         <ScrollArea>
-          <Table striped highlightOnHover>
+          <Table striped highlightOnHover miw={1200} layout="fixed" horizontalSpacing="md" verticalSpacing="xs">
             <Table.Thead>
               <Table.Tr>
-                <Table.Th>
+                <Table.Th w={30}>
                   <Checkbox
                     checked={selectedIds.size === paginatedData.length && paginatedData.length > 0}
                     indeterminate={selectedIds.size > 0 && selectedIds.size < paginatedData.length}
                     onChange={handleSelectAll}
                   />
                 </Table.Th>
-                <Table.Th><SortableHeader field="name">Name</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="sku">SKU</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="category">Category</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="status">Status</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="price">Price</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="stockQuantity">Stock</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="supplier">Supplier</SortableHeader></Table.Th>
-                <Table.Th><SortableHeader field="lastUpdated">Updated</SortableHeader></Table.Th>
+                <Table.Th w={230}><SortableHeader field="name">Name</SortableHeader></Table.Th>
+                <Table.Th w={170}><SortableHeader field="sku">SKU</SortableHeader></Table.Th>
+                <Table.Th w={120}><SortableHeader field="category">Category</SortableHeader></Table.Th>
+                <Table.Th w={140}><SortableHeader field="status">Status</SortableHeader></Table.Th>
+                <Table.Th w={100}><SortableHeader field="price">Price</SortableHeader></Table.Th>
+                <Table.Th w={80}><SortableHeader field="stockQuantity">Stock</SortableHeader></Table.Th>
+                <Table.Th w={180}><SortableHeader field="supplier">Supplier</SortableHeader></Table.Th>
+                <Table.Th w={100}><SortableHeader field="lastUpdated">Updated</SortableHeader></Table.Th>
               </Table.Tr>
             </Table.Thead>
             <Table.Tbody>
