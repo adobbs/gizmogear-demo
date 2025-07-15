@@ -1,69 +1,75 @@
-# React + TypeScript + Vite
+# GizmoGear Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern inventory management demo application showcasing React, TypeScript, and Mantine UI components.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+GizmoGear is a demonstration inventory management system for tracking electronic components, mechanical parts, software tools, and automotive equipment. The application features a clean, responsive interface with comprehensive CRUD operations, search functionality, and bulk management capabilities.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Inventory Management**: Add, edit, delete, and view gizmo inventory items
+- **Advanced Search**: Real-time search across name, category, supplier, and SKU
+- **Bulk Operations**: Select multiple items for batch deletion
+- **Status Tracking**: Monitor item status (Active, Not Recommended, Discontinued)
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Data Persistence**: Client-side state management with Zustand
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 19** with TypeScript for type-safe development
+- **Vite** for fast development and optimized builds
+- **Mantine v8** for comprehensive UI components
+- **Zustand** for lightweight state management
+- **Lucide React** for consistent iconography
+- **PostCSS** with Mantine preset for styling
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) to view the application.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create a production build:
+```bash
+npm run build
 ```
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+### Code Quality
+
+Run ESLint to check code quality:
+```bash
+npm run lint
+```
+
+## Demo Data
+
+The application starts with 50 sample gizmo items generated automatically. All data is stored in browser memory and will reset on page refresh.
+
+## License
+
+This project is a demonstration application and is not intended for production use.

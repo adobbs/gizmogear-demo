@@ -140,7 +140,7 @@ export function GizmoTable({ onNewGizmo }: GizmoTableProps) {
           <Button
             leftSection={<Plus size={16} />}
             onClick={onNewGizmo}
-            color="tireTutorBlue"
+            color="gizmoGearBlue"
           >
             New Gizmo
           </Button>
@@ -161,7 +161,7 @@ export function GizmoTable({ onNewGizmo }: GizmoTableProps) {
           </Text>
           <ActionIcon
             variant="light"
-            color="tireTutorBlue"
+            color="gizmoGearBlue"
             onClick={() => window.location.reload()}
           >
             <RefreshCw size={16} />
@@ -219,7 +219,7 @@ export function GizmoTable({ onNewGizmo }: GizmoTableProps) {
                   </Table.Td>
                   <Table.Td>
                     <Text
-                      c={gizmo.stockQuantity < 10 ? 'red' : gizmo.stockQuantity < 25 ? 'tireTutorOrange' : 'tireTutorBlue'}
+                      c={gizmo.stockQuantity < 10 ? 'red' : gizmo.stockQuantity < 25 ? 'gizmoGearOrange' : 'gizmoGearBlue'}
                       fw={gizmo.stockQuantity < 10 ? 'bold' : 'normal'}
                     >
                       {gizmo.stockQuantity}

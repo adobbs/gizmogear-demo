@@ -1,37 +1,51 @@
 import { createTheme } from '@mantine/core';
 import type { MantineColorsTuple } from '@mantine/core';
 
-const tireTutorBlue: MantineColorsTuple = [
-  '#eff6ff',
-  '#dbeafe', 
-  '#bfdbfe',
-  '#93c5fd',
-  '#60a5fa',
-  '#3b82f6',
-  '#2563eb', // TireTutor primary
-  '#1d4ed8',
-  '#1e40af',
-  '#1e3a8a'
+const gizmoGearBlue: MantineColorsTuple = [
+  '#f0f4ff',
+  '#d6e2ff', 
+  '#adc4ff',
+  '#7ea0ff',
+  '#4e7bff',
+  '#1f56ff',
+  '#0e2987', // GizmoGear primary navy
+  '#0c2470',
+  '#0a1f59',
+  '#081a42'
 ];
 
-const tireTutorOrange: MantineColorsTuple = [
-  '#fff7ed',
-  '#ffedd5',
-  '#fed7aa',
-  '#fdba74',
-  '#fb923c',
-  '#f97316', // TireTutor accent
-  '#ea580c',
-  '#dc2626',
-  '#c2410c',
-  '#9a3412'
+const gizmoGearOrange: MantineColorsTuple = [
+  '#fff5f0',
+  '#ffe8d6',
+  '#ffd4ac',
+  '#ffba7a',
+  '#ff9545',
+  '#ff6f0e',
+  '#fa4f01', // GizmoGear primary orange
+  '#e04401',
+  '#c63901',
+  '#a82f01'
+];
+
+const gizmoGearGray: MantineColorsTuple = [
+  '#f8f9fa',
+  '#e9ecef',
+  '#dee2e6',
+  '#ced4da',
+  '#adb5bd',
+  '#6c757d',
+  '#495057', // GizmoGear dark gray
+  '#343a40',
+  '#212529',
+  '#1a1e22'
 ];
 
 export const theme = createTheme({
-  primaryColor: 'tireTutorBlue',
+  primaryColor: 'gizmoGearBlue',
   colors: {
-    tireTutorBlue,
-    tireTutorOrange,
+    gizmoGearBlue,
+    gizmoGearOrange,
+    gizmoGearGray,
   },
   fontFamily: 'Inter, system-ui, sans-serif',
   headings: {

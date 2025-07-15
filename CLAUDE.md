@@ -25,7 +25,7 @@ This is a React TypeScript application built with Vite, using Mantine UI compone
 - `src/store/` - Zustand stores for state management
 - `src/types/` - TypeScript type definitions
 - `src/data/` - Seed data and data utilities
-- `src/theme/` - Mantine theme configuration with TireTutor branding
+- `src/theme/` - Mantine theme configuration with GizmoGear branding
 - `src/assets/` - Static assets
 
 ### State Management
@@ -36,9 +36,10 @@ The application uses Zustand for state management with a main `gizmoStore` that 
 - Toast notifications via Mantine
 
 ### Theme System
-Custom Mantine theme with TireTutor brand colors:
-- Primary: `tireTutorBlue` (blue palette)
-- Accent: `tireTutorOrange` (orange palette)
+Custom Mantine theme with GizmoGear brand colors:
+- Primary: `gizmoGearBlue` (blue palette)
+- Accent: `gizmoGearOrange` (orange palette)
+- Neutral: `gizmoGearGray` (gray palette)
 - Font: Inter system font
 
 ### Path Aliases
@@ -47,4 +48,17 @@ Custom Mantine theme with TireTutor brand colors:
 ### Development Notes
 - Uses crypto.randomUUID() for generating unique IDs
 - Notifications are handled through Mantine's notification system
-- The application appears to be a gizmo/inventory management demo
+- Seed data generates 50 initial gizmo items on app load
+- The store contains outdated color reference (`tireTutorOrange` in notifications) that should be updated to `gizmoGearOrange`
+
+### Component Architecture
+- **AppShell**: Main layout with branded header featuring two-tone "Gizmo"/"Gear" logo
+- **GizmoTable**: Data table with sorting, pagination, search, and bulk operations
+- **NewGizmoModal**: Form modal for adding inventory items
+- **StatusBadge**: Color-coded status indicators (Active/Not Recommended/Discontinued)
+
+### Status System
+Gizmo status values and their visual representations:
+- `active`: Blue badge (`gizmoGearBlue`)
+- `not recommended`: Dark gray badge (`gizmoGearGray`) 
+- `discontinued`: Orange badge (`gizmoGearOrange`)

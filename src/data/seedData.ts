@@ -20,7 +20,7 @@ const suppliers = [
 ];
 
 const categories: Gizmo['category'][] = ['electronics', 'mechanical', 'software', 'automotive'];
-const statuses: Gizmo['status'][] = ['active', 'maintenance', 'discontinued'];
+const statuses: Gizmo['status'][] = ['active', 'not recommended', 'discontinued'];
 
 export function generateSeedData(count: number = 50): Gizmo[] {
   return Array.from({ length: count }, (_, index) => {

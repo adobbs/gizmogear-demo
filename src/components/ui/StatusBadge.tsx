@@ -7,20 +7,24 @@ interface StatusBadgeProps {
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   const colors = {
-    active: 'tireTutorBlue',
-    maintenance: 'tireTutorOrange',
-    discontinued: 'red',
+    active: 'gizmoGearBlue',
+    'not recommended': 'gizmoGearGray',
+    discontinued: 'gizmoGearOrange',
   };
 
   const labels = {
     active: 'Active',
-    maintenance: 'Maintenance',
+    'not recommended': 'Not Recommended',
     discontinued: 'Discontinued',
   };
 
+  // Fallback for unknown status values
+  const color = colors[status] || 'gray';
+  const label = labels[status] || status;
+
   return (
-    <Badge color={colors[status]} variant="filled" size="sm">
-      {labels[status]}
+    <Badge color={color} variant="filled" size="sm">
+      {label}
     </Badge>
   );
 }

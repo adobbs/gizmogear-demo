@@ -76,7 +76,7 @@ export function NewGizmoModal({ opened, onClose }: NewGizmoModalProps) {
               label="Status"
               data={[
                 { value: 'active', label: 'Active' },
-                { value: 'maintenance', label: 'Maintenance' },
+                { value: 'not recommended', label: 'Not Recommended' },
                 { value: 'discontinued', label: 'Discontinued' },
               ]}
               {...form.getInputProps('status')}
@@ -121,7 +121,7 @@ export function NewGizmoModal({ opened, onClose }: NewGizmoModalProps) {
             <Button variant="subtle" onClick={onClose}>
               Cancel
             </Button>
-            <Button type="submit" color="tireTutorBlue">
+            <Button type="submit" color="gizmoGearBlue">
               Add Gizmo
             </Button>
           </Group>

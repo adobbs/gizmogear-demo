@@ -2,7 +2,7 @@ export interface Gizmo {
   id: string;
   name: string;
   category: 'electronics' | 'mechanical' | 'software' | 'automotive';
-  status: 'active' | 'maintenance' | 'discontinued';
+  status: 'active' | 'not recommended' | 'discontinued';
   price: number;
   stockQuantity: number;
   lastUpdated: Date;

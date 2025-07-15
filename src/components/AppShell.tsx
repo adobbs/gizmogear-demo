@@ -15,12 +15,13 @@ export function AppShellLayout({ children }: AppShellLayoutProps) {
       <AppShell.Header>
         <Group h="100%" px="md" justify="space-between">
           <Group>
-            <ThemeIcon color="tireTutorBlue" size="lg" variant="light">
+            <ThemeIcon color="gizmoGearBlue" size="lg" variant="light">
               <Cpu size={20} />
             </ThemeIcon>
             <div>
-              <Title order={3} c="tireTutorBlue">
-                GizmoGear
+              <Title order={3}>
+                <Text component="span" c="gizmoGearBlue" inherit>Gizmo</Text>
+                <Text component="span" c="gizmoGearOrange" inherit>Gear</Text>
               </Title>
               <Text size="xs" c="dimmed">
                 Inventory Management Demo
@@ -29,7 +30,7 @@ export function AppShellLayout({ children }: AppShellLayoutProps) {
           </Group>
           <Group>
             <Text size="sm" c="dimmed">
-              Built with Mantine + Zustand
+              Built with React + Mantine + Zustand
             </Text>
           </Group>
         </Group>
